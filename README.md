@@ -25,7 +25,7 @@ Or install it yourself as:
 
 ```ruby
 client = CallVerification::Client.new(api_key: ENV['SMS_RU_API_KEY'])
-client.code_call(phone: '+79992222222') #=> {"status"=>"OK", "code"=>4252, "call_id"=>"202244-1000026", "balance"=>306.61, "cost"=>0.4}
+client.code_call(phone: '+79992222222', ip: '192.158.1.38') #=> {"status"=>"OK", "code"=>4252, "call_id"=>"202244-1000026", "balance"=>306.61, "cost"=>0.4}
 ```
 
 ## Development

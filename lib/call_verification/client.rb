@@ -14,9 +14,10 @@ module CallVerification
       @stubs = stubs
     end
 
-    def code_call(phone:)
+    def code_call(phone:, ip: nil)
       connection.get('/code/call') do |req|
         req.params['phone'] = phone
+        req.params['ip'] = ip
         req.params['api_id'] = api_key
       end
     end
